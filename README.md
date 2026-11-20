@@ -46,7 +46,9 @@ Open **MCP Servers → Configure → Configure MCP Servers** and add xmlvalid to
 }
 ```
 
-Replace `xv_your_api_key` with your key (see [Authentication](#authentication)). To try the lookup tools first, leave out `headers`: `search_schemas`, `explain_error` and `explain_rule` work without an account, and only `validate_xml` and `get_validation` answer that you need to sign in.
+Replace `xv_your_api_key` with your key (see [Authentication](#authentication)). Or leave out `headers` and sign in instead: `search_schemas`, `explain_error` and `explain_rule` work without an account, and the first `validate_xml` makes Cline report that the server requires OAuth authorization. Authorize xmlvalid from Cline's MCP servers (in Cline CLI, `cline mcp`) and sign in to xmlvalid in the browser.
+
+The same works in [Cline CLI](https://docs.cline.bot/cline-cli/overview), which reads `~/.cline/data/settings/cline_mcp_settings.json`; the tools show up as `xmlvalid__explain_rule` and so on.
 
 ## Other clients
 
