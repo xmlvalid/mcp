@@ -1,0 +1,17 @@
+{
+  "name": "xmlvalid",
+  "displayName": "xmlvalid",
+  "description": "Validate XML and e-invoices (XSD, DTD, RelaxNG, EN 16931, Peppol, XRechnung, Factur-X) and explain parser errors and business rules, through the hosted xmlvalid MCP server.",
+  "version": "1.1.0",
+  "author": {
+    "name": "xmlvalid",
+    "url": "https://xmlvalid.com"
+  },
+  "homepage": "https://xmlvalid.com/docs/api#mcp",
+  "repository": "https://github.com/xmlvalid/mcp",
+  "license": "MIT",
+  "keywords": ["xml", "xsd", "validation", "e-invoicing", "peppol", "xrechnung", "factur-x", "zugferd", "en16931", "schematron", "mcp"],
+  "logo": "assets/logo.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "xmlvalid": {
+      "type": "http",
+      "url": "https://xmlvalid.com/mcp"
+    }
+  }
+}

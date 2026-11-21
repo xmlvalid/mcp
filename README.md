@@ -68,7 +68,7 @@ gemini extensions install https://github.com/xmlvalid/mcp
 
 The first `validate_xml` call opens the browser to sign in.
 
-**Cursor** (`.cursor/mcp.json`):
+**Cursor**: this repository is also a Cursor plugin (`.cursor-plugin/plugin.json`: the server and a `validate-xml` skill). Or add the server alone to `.cursor/mcp.json`:
 
 ```json
 {
