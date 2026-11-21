@@ -60,6 +60,14 @@ claude mcp add --transport http xmlvalid https://xmlvalid.com/mcp
 
 then `/mcp` to sign in.
 
+**Gemini CLI**: install it as an extension, which also gives Gemini a short guide to the tools:
+
+```bash
+gemini extensions install https://github.com/xmlvalid/mcp
+```
+
+The first `validate_xml` call opens the browser to sign in.
+
 **Cursor** (`.cursor/mcp.json`):
 
 ```json
