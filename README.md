@@ -2,7 +2,7 @@
 
 <img src="logo.png" alt="xmlvalid" width="96" align="right">
 
-The [xmlvalid](https://xmlvalid.com) MCP server lets an AI agent validate XML documents and e-invoices and explain what fails: XSD, DTD and RelaxNG schemas, and the official Schematron business rules of EN 16931, Peppol BIS Billing 3.0, XRechnung, ZUGFeRD / Factur-X, France CTC, KSeF, FatturaPA, Peppol PINT and other national formats (178 schemas, 56 rule sets with 7,751 rules).
+The [xmlvalid](https://xmlvalid.com) MCP server lets an AI agent validate XML documents and e-invoices and explain what fails: XSD, DTD and RelaxNG schemas, and the official Schematron business rules of EN 16931, Peppol BIS Billing 3.0, XRechnung, ZUGFeRD / Factur-X, France CTC, KSeF, FatturaPA, Peppol PINT and other national formats (182 schemas, 57 rule sets with 7,808 rules). It also writes e-invoices from structured data: XRechnung, Peppol BIS, ZUGFeRD / Factur-X, France CTC, NLCIUS, KSeF FA(3), FatturaPA, Facturae and e-SLOG.
 
 It is a hosted server: there is nothing to install or run. Point your client at
 
@@ -19,7 +19,7 @@ https://xmlvalid.com/mcp
 | Tool | What it does | Account |
 | --- | --- | --- |
 | `validate_xml` | Validates a document, given as its text (`xml`) or a public URL (`url`), against a catalog schema (`schema`: a slug from `search_schemas`), one of your saved schemas (`@name`) or `auto` (the e-invoice profile the document names in its specification identifier, BT-24). Without a schema it checks well-formedness. | Needed, counts as one API validation |
-| `create_invoice` | Writes an e-invoice (`invoice`: profile `xrechnung`, `peppol`, `zugferd` or `france`, the parties, lines and payment, as [`POST /invoices`](https://xmlvalid.com/docs/api#invoices) takes them) as XRechnung, Peppol BIS, ZUGFeRD / Factur-X or France CTC XML and checks it with the profile's official rules; returns the result, the totals as written, fields it had no place for (`ignored`) and the XML. | Needed, counts as one API validation |
+| `create_invoice` | Writes an e-invoice (`invoice`: profile `xrechnung`, `peppol`, `zugferd`, `france`, `nlcius`, `ksef`, `fatturapa`, `facturae` or `eslog`, the parties, lines and payment, as [`POST /invoices`](https://xmlvalid.com/docs/api#invoices) takes them) as XRechnung, Peppol BIS, ZUGFeRD / Factur-X, France CTC, NLCIUS / SI-UBL 2.0, KSeF FA(3), FatturaPA 1.2, Facturae 3.2.2 or e-SLOG 2.0 XML and checks it with the profile's official rules; returns the result, the totals as written, fields it had no place for (`ignored`) and the XML. | Needed, counts as one API validation |
 | `get_validation` | The result of a validation that was still running when `validate_xml` or `create_invoice` returned. | Needed |
 | `search_schemas` | Finds the catalog slug for a format: "peppol invoice", "xrechnung cii", "pain.001". | Not needed |
 | `explain_error` | Explains a parser or validator message from libxml2 (xmllint, PHP, Python lxml), Java (Xerces `cvc-*`, SAX) or .NET (System.Xml): what it means, why it happens, how to fix it, with an example. | Not needed |
