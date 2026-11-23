@@ -1,7 +1,7 @@
 {
   "name": "xmlvalid",
-  "version": "1.1.0",
-  "description": "Validate XML and e-invoices (XSD, DTD, RelaxNG, EN 16931, Peppol, XRechnung, Factur-X) and explain parser errors and business rules",
+  "version": "1.2.0",
+  "description": "Validate XML and e-invoices (XSD, DTD, RelaxNG, EN 16931, Peppol, XRechnung, Factur-X), write e-invoices from structured data and explain parser errors and business rules",
   "mcpServers": {
     "xmlvalid": {
       "httpUrl": "https://xmlvalid.com/mcp"

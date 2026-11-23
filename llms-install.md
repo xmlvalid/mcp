@@ -4,7 +4,7 @@ xmlvalid is a hosted MCP server. There is nothing to clone, build or run: add it
 
 - URL: `https://xmlvalid.com/mcp`
 - Transport: Streamable HTTP (`"type": "streamableHttp"` in Cline)
-- Authentication: an API key in the `Authorization` header, `Bearer xv_…`. Optional for `search_schemas`, `explain_error` and `explain_rule`; required for `validate_xml` and `get_validation`.
+- Authentication: an API key in the `Authorization` header, `Bearer xv_…`. Optional for `search_schemas`, `explain_error` and `explain_rule`; required for `validate_xml`, `create_invoice` and `get_validation`.
 
 ## Steps
 

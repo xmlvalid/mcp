@@ -11,3 +11,5 @@ description: Validate an XML document or e-invoice (UBL, CII, XRechnung, Peppol 
 4. Read the findings in order. Fix the first errors first: later ones often follow from them, and business rules run only once the schema check passes. Each finding has a line, column, rule id and a link that explains it.
 5. For a message you don't understand, call `explain_error` with it (libxml2, Java's Xerces `cvc-*` and .NET wordings are known). For a business rule id, call `explain_rule`. Neither needs an account.
 6. After changing the document, validate it again until it passes.
+
+To write a new invoice instead (XRechnung, Peppol BIS, ZUGFeRD / Factur-X, France CTC), call `create_invoice` with the profile, the parties, the lines and the payment; it returns the XML already checked, and the same findings to fix when it fails.
